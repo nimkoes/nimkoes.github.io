@@ -3,20 +3,23 @@ name: Deploy to GitHub Pages
 on:
   push:
     branches: [ main ]
+  repository_dispatch:
+    types:
+      - tech-blog-deployed
 
 permissions:
-  contents: read
+  contents: write
   pages: write
   id-token: write
 
 jobs:
-  build-and-deploy:
+  deploy:
     runs-on: ubuntu-latest
     environment:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
     steps:
-      - name: Checkout
+      - name: Checkout current repo
         uses: actions/checkout@v4
 
       - name: Setup Pages
@@ -26,7 +29,43 @@ jobs:
         uses: actions/upload-pages-artifact@v3
         with:
           path: '.'
+          retention-days: 1
 
       - name: Deploy to GitHub Pages
         id: deployment
-        uses: actions/deploy-pages@v4 
+        uses: actions/deploy-pages@v4
+        with:
+          artifact_name: github-pages
+
+  update-sitemap:
+    needs: deploy
+    runs-on: ubuntu-latest
+    if: github.event_name == 'repository_dispatch'
+    steps:
+      - name: Checkout current repo
+        uses: actions/checkout@v4
+
+      - name: Checkout tech-blog repo
+        uses: actions/checkout@v4
+        with:
+          repository: https://github.com/nimkoes/tech-blog.git
+          token: ${{ secrets.TECH_BLOG_TOKEN }}
+          path: tech-blog
+
+      - name: Generate sitemap
+        run: |
+          # tech-blog의 sitemap.xml을 현재 저장소로 복사
+          cp tech-blog/public/sitemap.xml ./sitemap.xml
+          
+          # 현재 저장소의 sitemap.xml에 메인 페이지 추가
+          if ! grep -q "https://nimkoes.github.io/" sitemap.xml; then
+            sed -i '' '/<\/urlset>/i\  <url>\    <loc>https://nimkoes.github.io/<\/loc>\    <lastmod>$(date +%Y-%m-%d)<\/lastmod>\    <changefreq>weekly<\/changefreq>\    <priority>1.0<\/priority>\  <\/url>' sitemap.xml
+          fi
+
+      - name: Commit and push changes
+        run: |
+          git config --local user.email "action@github.com"
+          git config --local user.name "GitHub Action"
+          git add sitemap.xml
+          git commit -m "Update sitemap from tech-blog" || exit 0
+          git push 
