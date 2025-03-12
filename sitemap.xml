@@ -2,19 +2,19 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 <url>
 <loc>https://nimkoes.github.io</loc>
-<lastmod>2025-03-11T23:38:19.433Z</lastmod>
+<lastmod>2025-03-12T15:22:38.430Z</lastmod>
 <changefreq>daily</changefreq>
 <priority>1</priority>
 </url>
 <url>
 <loc>https://nimkoes.github.io/tech-blog</loc>
-<lastmod>2025-03-11T23:38:19.433Z</lastmod>
+<lastmod>2025-03-12T15:22:38.430Z</lastmod>
 <changefreq>daily</changefreq>
 <priority>1</priority>
 </url>
 <url>
 <loc>https://nimkoes.github.io/google-site-verification.html</loc>
-<lastmod>2025-03-11T23:38:19.433Z</lastmod>
+<lastmod>2025-03-12T15:22:38.430Z</lastmod>
 <changefreq>yearly</changefreq>
 <priority>0.1</priority>
 </url>
@@ -279,6 +279,12 @@
 <url>
 <loc>https://nimkoes.github.io/tech-blog/post/0044250311-spring-security-document</loc>
 <lastmod>2025-03-11T00:00:00.000Z</lastmod>
+<changefreq>weekly</changefreq>
+<priority>0.8</priority>
+</url>
+<url>
+<loc>https://nimkoes.github.io/tech-blog/post/0045250312-spring-security-document</loc>
+<lastmod>2025-03-12T00:00:00.000Z</lastmod>
 <changefreq>weekly</changefreq>
 <priority>0.8</priority>
 </url>
