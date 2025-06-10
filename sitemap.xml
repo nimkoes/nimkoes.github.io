@@ -2,19 +2,19 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 <url>
 <loc>https://nimkoes.github.io</loc>
-<lastmod>2025-06-10T01:58:17.899Z</lastmod>
+<lastmod>2025-06-10T02:38:39.095Z</lastmod>
 <changefreq>daily</changefreq>
 <priority>1</priority>
 </url>
 <url>
 <loc>https://nimkoes.github.io/tech-blog</loc>
-<lastmod>2025-06-10T01:58:17.899Z</lastmod>
+<lastmod>2025-06-10T02:38:39.095Z</lastmod>
 <changefreq>daily</changefreq>
 <priority>1</priority>
 </url>
 <url>
 <loc>https://nimkoes.github.io/google-site-verification.html</loc>
-<lastmod>2025-06-10T01:58:17.899Z</lastmod>
+<lastmod>2025-06-10T02:38:39.095Z</lastmod>
 <changefreq>yearly</changefreq>
 <priority>0.1</priority>
 </url>
@@ -255,12 +255,6 @@
 <url>
 <loc>https://nimkoes.github.io/tech-blog/post/0041250309-spring-security-inner-structure</loc>
 <lastmod>2025-03-09T00:00:00.000Z</lastmod>
-<changefreq>weekly</changefreq>
-<priority>0.8</priority>
-</url>
-<url>
-<loc>https://nimkoes.github.io/tech-blog/post/0042250609-java-online-study</loc>
-<lastmod>2025-06-09T00:00:00.000Z</lastmod>
 <changefreq>weekly</changefreq>
 <priority>0.8</priority>
 </url>
