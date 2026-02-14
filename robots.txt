@@ -1,5 +1,4 @@
 User-Agent: *
-Allow: /
 Allow: /tech-blog/
 Disallow: /private/
 Disallow: /admin/
@@ -13,4 +12,4 @@ User-Agent: CCBot
 Disallow: /
 
 Host: https://nimkoes.github.io
-Sitemap: https://nimkoes.github.io/sitemap.xml
+Sitemap: https://nimkoes.github.io/tech-blog/sitemap.xml
