@@ -25,6 +25,12 @@
 <priority>0.6</priority>
 </url>
 <url>
+<loc>https://nimkoes.github.io/tech-blog/post/0144-ai-machine-learning-generative-ai-llm</loc>
+<lastmod>2026-11-22T00:00:00.000Z</lastmod>
+<changefreq>weekly</changefreq>
+<priority>0.8</priority>
+</url>
+<url>
 <loc>https://nimkoes.github.io/tech-blog/post/0143-305-go-web-server-with-echo-setup-part-two-file-download-using-echo</loc>
 <lastmod>2026-11-22T00:00:00.000Z</lastmod>
 <changefreq>weekly</changefreq>
